@@ -48,10 +48,10 @@ fn part_2() -> i32 {
 
     for line in &lines {
         let mut line_replaced = String::from(line);
-        println!("{}", line_replaced);
+        // println!("{}", line_replaced);
         for v in values_to_replace {
             line_replaced = line_replaced.replace(v[0], v[1]);
-            println!("{}", line_replaced);
+            // println!("{}", line_replaced);
         }
 
         let mut numbers = Vec::new();
@@ -61,7 +61,7 @@ fn part_2() -> i32 {
             if character.is_numeric() {
                 // This is a number
                 numbers.push(character);
-                println!("{}", character);
+                // println!("{}", character);
             }
         }
 
@@ -72,12 +72,12 @@ fn part_2() -> i32 {
         let mut number_string = String::new();
         number_string.push(numbers[0]);
         number_string.push(numbers[numbers.len() - 1]);
-        println!("{}", number_string);
+        // println!("{}", number_string);
 
         let number: i32 = number_string.parse().unwrap();
         sum += number;
 
-        println!();
+        // println!();
     }
 
     sum
